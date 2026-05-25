@@ -79,7 +79,7 @@ public class BinaryTree {
     }
 
 
-    public BinaryTree fixTree() {
+    public void fixTree() {
         ArrayList<TreeNode> mistakes = new ArrayList<>();
         mistakes.add(null);
         mistakes.add(null);
@@ -88,20 +88,17 @@ public class BinaryTree {
         findMistakes(root, mistakes);
 
         if (mistakes.get(0) == null) {
-            return this;
+            return;
         }
 
         int temp = mistakes.get(0).value;
         mistakes.get(0).value = mistakes.get(1).value;
         mistakes.get(1).value = temp;
 
-        if (isSearchTree()) {
-            return this;
-        } else {
+        if (!isSearchTree()) {
             temp = mistakes.get(0).value;
             mistakes.get(0).value = mistakes.get(1).value;
             mistakes.get(1).value = temp;
-            return null;
         }
     }
 
@@ -111,7 +108,7 @@ public class BinaryTree {
         findMistakes(node.left, mistakes);
 
         if (prev != null && prev.value > node.value) {
-            if (mistakes.get(0) == null) {
+            if (mistakes.getFirst() == null) {
                 mistakes.set(0, prev);
             }
             mistakes.set(1, node);
