@@ -1,7 +1,6 @@
 package Test;
 
 import Task.BinaryTree;
-import Task.Solution;
 import Task.TreeNode;
 import org.junit.jupiter.api.Test;
 
@@ -23,7 +22,7 @@ class BSTTests {
 
         tree.root = root;
 
-        boolean result = Solution.solve(tree);
+        boolean result = tree.canTreeBeFixed();
 
         assertTrue(result);
     }
@@ -42,7 +41,7 @@ class BSTTests {
 
         tree.root = root;
 
-        boolean result = Solution.solve(tree);
+        boolean result = tree.canTreeBeFixed();
 
         assertTrue(result);
 
@@ -62,7 +61,7 @@ class BSTTests {
 
         tree.root = root;
 
-        boolean result = Solution.solve(tree);
+        boolean result = tree.canTreeBeFixed();
 
         assertFalse(result);
     }
@@ -83,7 +82,7 @@ class BSTTests {
 
         tree.root = root;
 
-        boolean result = Solution.solve(tree);
+        boolean result = tree.canTreeBeFixed();
 
         assertTrue(result);
 
@@ -95,7 +94,7 @@ class BSTTests {
     void emptyTree() {
         BinaryTree tree = new BinaryTree();
 
-        boolean result = Solution.solve(tree);
+        boolean result = tree.canTreeBeFixed();
 
         assertTrue(result);
     }
@@ -106,7 +105,7 @@ class BSTTests {
 
         tree.root = new TreeNode(0);
 
-        boolean result = Solution.solve(tree);
+        boolean result = tree.canTreeBeFixed();
 
         assertTrue(result);
     }
@@ -120,7 +119,7 @@ class BSTTests {
 
         tree.root = root;
 
-        boolean result = Solution.solve(tree);
+        boolean result = tree.canTreeBeFixed();
 
         assertTrue(result);
     }
@@ -134,7 +133,7 @@ class BSTTests {
 
         tree.root = root;
 
-        boolean result = Solution.solve(tree);
+        boolean result = tree.canTreeBeFixed();
 
         assertTrue(result);
 
@@ -158,7 +157,7 @@ class BSTTests {
 
         tree.root = root;
 
-        boolean result = Solution.solve(tree);
+        boolean result = tree.canTreeBeFixed();
 
         assertTrue(result);
 
